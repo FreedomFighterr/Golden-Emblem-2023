@@ -1,0 +1,110 @@
+/* main */
+
+/* hero section */
+
+#to-vote-btn {
+    background-color: var(--goldie);
+}
+
+#to-vote-btn:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    border: 1px solid var(--goldie);
+    color: var(--goldie) !important;
+    transition: 300ms;
+}
+
+#btn-about {
+    border: 1px solid var(--goldie);
+    color: var(--goldie);
+}
+
+#btn-about:hover {
+    transform: scale(1.09);
+    background: transparent;
+    border: 1px solid var(--goldie);
+}
+
+/* vote section */
+.card:hover {
+    transform: scale(1.03);
+    transition: 300ms;
+}
+
+.club-emblem {
+    height: 40vh;
+    padding: 20px;
+    border-bottom: 1px solid var(--goldie)
+}
+
+.club-emblem:hover {
+    cursor: pointer;
+}
+
+.vote-btn {
+    background-color: var(--goldie);
+    color: white;
+}
+
+.vote-btn:hover {
+    transform: scale(1.09);
+    border: 1px solid var(--goldie);
+    color: var(--goldie) !important;
+    transition: 300ms;
+}
+
+.more-info {
+    border: 1px solid var(--goldie);
+    color: var(--goldie);
+}
+
+.more-info:hover {
+    transform: scale(1.09);
+    background: transparent;
+    border: 1px solid var(--goldie);
+}
+
+/* check votes section */
+
+.progress {
+    height: 30px;
+}
+
+.progress-bar {
+    background-color: var(--goldie);
+}
+
+/* sponsored */
+
+.sponsor-logo {
+    height: 20vh;
+    width: 70%;
+    
+}
+
+#best-img-col {
+    display: flex;
+    justify-content: end;
+}
+
+#best-name-col {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+    #best-img-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    #best-name-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0 !important;
+    }
+}

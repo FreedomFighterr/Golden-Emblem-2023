@@ -1,0 +1,47 @@
+.a-website {
+    text-decoration: none;
+    color: silver;
+}
+
+.a-website:hover {
+    color: silver;
+    text-decoration: underline;
+}
+
+.emblem-img {
+    height: 30vh;
+    width: 20vw;
+}
+
+#show-more {
+    color: #363636;
+}
+
+/* responsive */
+@media only screen and (max-width: 1200px) {
+    .emblem-img {
+        height: 30vh;
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .emblem-img {
+        height: 30vh;
+        width: 55vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .emblem-img {
+        height: 27vh;
+        width: 65vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .emblem-img {
+        height: 26vh;
+        width: 85vw;
+    }
+}

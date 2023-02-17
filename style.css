@@ -1,0 +1,102 @@
+/* universal css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: var(--goldie);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--lightie);
+}
+
+:root {
+    --goldie: goldenrod;
+    --lightie: #f8f9fa;
+    --darkie: #212529;
+    /* --circle // changing with modes */
+    --circle: #f8f9fa;
+}
+
+::selection {
+    color: white;
+    background-color: var(--goldie);
+}
+
+section {
+    padding-top: 10vh;
+}
+
+/* header */
+
+nav {
+    background: var(--lightie);
+    min-height: 10vh;
+    border-bottom: 2px solid var(--goldie);
+}
+
+.dropdown-menu {
+    border: 1px solid var(--goldie);
+}
+
+.navbar-toggler {
+    background-color: var(--goldie);
+}
+
+.btn-close {
+    background-color: var(--goldie);
+}
+
+.logo {
+    height: 70px;
+    width: 95px;
+}
+
+#hamburger-menu {
+    transition: 1000ms;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.social {
+    height: 30px;
+    width: 30px;
+}
+
+.social:hover {
+    transform: scale(1.1);
+}
+
+.fake-btn {
+    background-color: transparent;
+    border: none;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--goldie);
+
+}
+
+hr {
+    color: var(--lightie);
+}
+
+footer p,
+footer small,
+footer a,
+footer span {
+    color: white;
+    text-decoration: none;
+}
+
+footer span:hover,
+footer a:hover {
+    color: white;
+}
