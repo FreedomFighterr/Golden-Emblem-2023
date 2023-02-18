@@ -96,16 +96,23 @@ $('document').ready(() => {
             $('<div>', { class: 'col-lg-3 col-md-6 col-sm-4 py-3 text-center', id: `sponsor-col-${k}` }).appendTo('#sponsored-row')
             $('<img>', { class: 'sponsor-logo', src: `${sponsored_href_list[k]}`, alt: `${sponsored_list[k]}` }).appendTo(`#sponsor-col-${k}`)
         }
+    
         var url = document.location.href.split('/')
-        url = url[3]
-        if (url == 'index.html' || url == 'index.html#') {
-            console.log('page loaded')
-        } else {
-            // set timeout because of jquery load speed limit
-            setTimeout(() => {
+        var current_url = ''
+        var url_count = 0
+        for(let num=0; num<url.length; num++) {
+            current_url = url[num]
+            if(current_url == 'index.html' || current_url == 'index.html#') {
+                console.log('loaded')
+                url_count = 404
+            }
+        }
+        if(url_count != 404) {
+            setTimeout(()=> {
                 console.log('redirected')
-                document.location.href = url
+                window.document.location.href = current_url
             }, '250')
+            
         }
     })
 })

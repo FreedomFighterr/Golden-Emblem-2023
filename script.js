@@ -1,3 +1,27 @@
+function dark_mode() {
+    $(":root").css("--circle", "var(--darkie)");
+    setTimeout(()=> {
+        $('body').css('background', 'var(--darkie)')
+        $('nav').css('background', 'var(--darkie)')
+        $('.modal-content').css({'background':'var(--darkie)', 'border':'1px solid var(--goldie)'})
+        $('.modal-header').css('border-bottom', '1px solid var(--goldie)')
+        $('.dropdown-menu').css('background', 'var(--darkie)')
+        $('.offcanvas').css('background', 'var(--darkie)')
+    }, '200')
+}
+
+function light_mode() {
+    $(":root").css("--circle", "var(--lightie)");
+    setTimeout(()=> {
+        $('body').css('background', 'var(--lightie)')
+        $('nav').css('background', 'var(--lightie)')
+        $('.modal-content').css({'background':'var(--lightie)', 'border':'1px solid var(--goldie)'})
+        $('.modal-header').css('border-bottom', '1px solid var(--goldie)')
+        $('.dropdown-menu').css('background', 'var(--lightie)')
+        $('.offcanvas').css('background', 'var(--lightie)')
+    }, '200')
+}
+
 function check_votes(id) {
     var fbase = 'https://golden-emblem-default-rtdb.firebaseio.com/clubs'
     var club_list = []
@@ -71,19 +95,7 @@ $('#settingsModal').html(`
     </div>
   </div>`)
 
-// arrow back to top function manipulate
-window.addEventListener('scroll', () => {
-    let arrow_to_top = document.querySelector('.to-top')
-    if (window.pageYOffset > 200) {
-        arrow_to_top.classList.add('active')
-    }
-    else {
-        arrow_to_top.classList.remove('active')
-    }
-})
-
-// switching modes dark/light
-
+  // switching modes dark/light
 if (localStorage.getItem("switch_mode") == 0 || localStorage.getItem("switch_mode") == null) {
     light_mode()
 } else {
@@ -102,26 +114,14 @@ function switch_modes() {
     }
 }
 
-function dark_mode() {
-    $(":root").css("--circle", "var(--darkie)");
-    setTimeout(()=> {
-        $('body').css('background', 'var(--darkie)')
-        $('nav').css('background', 'var(--darkie)')
-        $('.modal-content').css({'background':'var(--darkie)', 'border':'1px solid var(--goldie)'})
-        $('.modal-header').css('border-bottom', '1px solid var(--goldie)')
-        $('.dropdown-menu').css('background', 'var(--darkie)')
-        $('.offcanvas').css('background', 'var(--darkie)')
-    }, '200')
-}
 
-function light_mode() {
-    $(":root").css("--circle", "var(--lightie)");
-    setTimeout(()=> {
-        $('body').css('background', 'var(--lightie)')
-        $('nav').css('background', 'var(--lightie)')
-        $('.modal-content').css({'background':'var(--lightie)', 'border':'1px solid var(--goldie)'})
-        $('.modal-header').css('border-bottom', '1px solid var(--goldie)')
-        $('.dropdown-menu').css('background', 'var(--lightie)')
-        $('.offcanvas').css('background', 'var(--lightie)')
-    }, '200')
-}
+// arrow back to top function manipulate
+window.addEventListener('scroll', () => {
+    let arrow_to_top = document.querySelector('.to-top')
+    if (window.pageYOffset > 200) {
+        arrow_to_top.classList.add('active')
+    }
+    else {
+        arrow_to_top.classList.remove('active')
+    }
+})
