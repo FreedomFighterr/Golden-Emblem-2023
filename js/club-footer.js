@@ -27,5 +27,5 @@ $('document').ready(() => {
     `).appendTo('#container-first-row')
 
     $('<div>', { class: 'row py-2' }).html(`<hr>
-    <div clas="col-md-12 pb-2"><p>&copy; Copyright 2023 - All rights reserved by Freedom Fighterr</p></div></div>`).appendTo('#footer-container')
+    <div clas="col-md-12 pb-2"><p>&copy; Copyright 2023 - All rights reserved by Andrej Stjepanović</p></div></div>`).appendTo('#footer-container')
 })
